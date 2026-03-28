@@ -1,0 +1,327 @@
+/* Tech Stack Mastery Styles - Added to end of styles.css */
+
+/* Section Entry Animations */
+@keyframes sectionSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#tech-stack {
+    animation: sectionSlideUp 0.8s ease-out;
+}
+
+.section-heading {
+    font-size: 3rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    transition: width 0.5s ease-out;
+}
+
+#tech-stack.animate .section-heading::after {
+    width: 8rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* Tabs */
+.tabs-container {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+    scroll-snap-type: x mandatory;
+}
+
+.tabs-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    flex: 0 0 auto;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    scroll-snap-align: start;
+}
+
+.tab-btn:hover {
+    border-color: #d1d5db;
+}
+
+.tab-btn.active {
+    background: var(--accent-color, #7F77DD);
+    color: white;
+    border-color: var(--accent-color, #7F77DD);
+    box-shadow: 0 4px 12px rgba(127, 119, 221, 0.25);
+}
+
+/* Tool Cards Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+}
+
+@media (max-width: 1024px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.tool-card {
+    background: white;
+    border: 0.5px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.tool-card:hover {
+    border-color: var(--accent-color);
+    background: rgba(var(--accent-color-rgb), 0.02);
+    transform: translateY(-4px);
+}
+
+.tool-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 auto 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover .tool-icon::before {
+    animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+    0% { width: 0; height: 0; opacity: 1; }
+    100% { width: 200%; height: 200%; opacity: 0; }
+}
+
+.tool-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background: rgba(var(--accent-color-rgb), 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 auto 1.25rem;
+    border: 0.5px solid rgba(var(--accent-color-rgb), 0.2);
+}
+
+.proficiency-container {
+    margin-bottom: 1rem;
+}
+
+.proficiency-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.proficiency-bar {
+    background: #f3f4f6;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.proficiency-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.8s ease-out;
+}
+
+.proficiency-text {
+    font-size: 0.75rem;
+    color: #374151;
+    font-weight: 500;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.used-at {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.used-at::before {
+    content: '●';
+    color: var(--accent-color);
+    margin-right: 0.25rem;
+}
+
+.tool-desc {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Summary Bar */
+.summary-bar {
+    background: linear-gradient(135deg, rgba(127, 119, 221, 0.05) 0%, rgba(29, 158, 117, 0.05) 100%);
+    border-top: 0.5px solid #f3f4f6;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.summary-stat {
+    text-align: center;
+}
+
+.summary-stat span:first-child {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color, #7F77DD);
+    display: block;
+    line-height: 1;
+}
+
+.summary-stat span:last-child {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .section-heading {
+        font-size: 2.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .tabs-container {
+        padding: 0.25rem 0;
+    }
+    
+    .tab-btn {
+        padding: 0.625rem 1.125rem;
+        font-size: 0.8125rem;
+    }
+    
+    .tool-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tool-card, .tab-btn, .proficiency-fill, .summary-stat span {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Color CSS Vars for dynamic theming */
+:root {
+    --purple: #7F77DD;
+    --teal: #1D9E75;
+    --blue: #2563EB;
+    --amber: #BA7517;
+    --coral: #D85A30;
+    --green: #639922;
+    --pink: #EC4899;
+    --gray: #888780;
+}

@@ -146,13 +146,33 @@
     </section>
 
     <!-- Infinite Scroll Tech Stack -->
-    <section id="tech-stack" class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 relative overflow-hidden">
+<section id="tech-stack" class="py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-12">
-            <h2 class="text-4xl md:text-5xl font-black text-white text-center mb-20">
-                Tech Stack Mastery
-            </h2>
-            <div id="infinite-scroll" class="overflow-hidden">
-                <!-- Populated by JS -->
+            <div class="text-center mb-24">
+                <h2 class="section-heading">Tech Stack Mastery</h2>
+                <p class="section-subtitle">Tools I use, skills I've built and experience I've earned.</p>
+            </div>
+            <div id="techStackApp">
+                <div id="tech-tabs" class="tabs-container mb-16"></div>
+                <div id="tech-grid" class="tools-grid"></div>
+                <div class="summary-bar">
+                    <div class="summary-stat">
+                        <span id="counter-tools">0</span>
+                        <span>Tools Mastered</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span id="counter-years">0</span>
+                        <span>Years Using</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span id="counter-projects">0</span>
+                        <span>Projects Applied On</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span id="counter-tests">0</span>
+                        <span>Test Cases Executed</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -318,6 +338,7 @@
     <script src="CSS/JS/Components/hero.js"></script>
     <script src="CSS/JS/Components/skills.js"></script>
     <script src="CSS/JS/Components/projects.js"></script>
+    <script src="CSS/JS/Components/tech-stack.js"></script>
     <script src="CSS/JS/main.js"></script>
 </body>
 </html>
