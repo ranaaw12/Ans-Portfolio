@@ -1966,17 +1966,31 @@ body {
 
 .tested-carousel-item img {
     width: 100%;
-    height: clamp(180px, 20vw, 250px);
+    height: clamp(265.0725px, 29.4525vw, 368.15625px);
+    -webkit-height: clamp(265.0725px, 29.4525vw, 368.15625px);
+    -moz-height: clamp(265.0725px, 29.4525vw, 368.15625px);
+    -ms-height: clamp(265.0725px, 29.4525vw, 368.15625px);
+    -o-height: clamp(265.0725px, 29.4525vw, 368.15625px);
     border-radius: 0.75rem;
     display: block;
     object-fit: cover;
+    -o-object-fit: cover;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+    -webkit-box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+    -moz-box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+    -ms-box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
 }
 
 
 @media (max-width: 767px) {
     .tested-carousel-item img {
-        height: 190px;
+        height: 279.79875px;
+        -webkit-height: 279.79875px;
+        -moz-height: 279.79875px;
+        -ms-height: 279.79875px;
+        -o-height: 279.79875px;
     }
 }
 
