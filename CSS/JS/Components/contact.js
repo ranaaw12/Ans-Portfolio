@@ -17,8 +17,8 @@ class Contact {
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
                 <!-- Contact Form - Left (40%) -->
                 <div class="lg:col-span-2">
-                    <form id="contact-form" class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Me a Message</h3>
+                    <form id="contact-form" class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800">Send Me a Message</h3>
                         
                         <div class="mb-6">
                             <label for="firstname" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
@@ -58,18 +58,18 @@ class Contact {
 
                 <!-- Contact Info Cards - Right (60%) -->
                 <div class="lg:col-span-3">
-                    <div class="space-y-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-8">Get In Touch</h3>
+                    <div class="space-y-4 md:space-y-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 md:mb-8">Get In Touch</h3>
                         
                         <!-- Email Card -->
-                        <div class="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div class="flex items-center space-x-6">
-                                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-envelope text-white text-2xl"></i>
+                        <div class="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl sm:text-2xl"></i>
                                 </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-white mb-2">Email</h4>
-                                    <a href="mailto:admin@gmail.com" class="text-white hover:text-yellow-200 transition-colors text-lg font-medium">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Email</h4>
+                                    <a href="mailto:ansranaans52@gmail.com" class="text-sm sm:text-lg font-medium text-white hover:text-yellow-200 transition-colors break-all">
                                         ansranaans52@gmail.com
                                     </a>
                                 </div>
@@ -77,14 +77,14 @@ class Contact {
                         </div>
 
                         <!-- Phone Card -->
-                        <div class="bg-gradient-to-br from-green-500 via-teal-600 to-cyan-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div class="flex items-center space-x-6">
-                                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-phone text-white text-2xl"></i>
+                        <div class="bg-gradient-to-br from-green-500 via-teal-600 to-cyan-700 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-white text-xl sm:text-2xl"></i>
                                 </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-white mb-2">Phone</h4>
-                                    <a href="tel:+923082674261" class="text-white hover:text-yellow-200 transition-colors text-lg font-medium">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Phone</h4>
+                                    <a href="tel:+923082674261" class="text-sm sm:text-lg font-medium text-white hover:text-yellow-200 transition-colors break-all">
                                         +92308 - 2674 - 261
                                     </a>
                                 </div>
@@ -92,14 +92,14 @@ class Contact {
                         </div>
 
                         <!-- Additional Info Card -->
-                        <div class="bg-gradient-to-br from-purple-500 via-pink-600 to-red-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div class="flex items-center space-x-6">
-                                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-clock text-white text-2xl"></i>
+                        <div class="bg-gradient-to-br from-purple-500 via-pink-600 to-red-700 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-xl sm:text-2xl"></i>
                                 </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-white mb-2">Response Time</h4>
-                                    <p class="text-white text-lg font-medium">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Response Time</h4>
+                                    <p class="text-sm sm:text-lg font-medium text-white">
                                         I'll respond within 24 hours
                                     </p>
                                 </div>

@@ -297,4 +297,6 @@ class PortfolioApp {
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioApp();
+    // Init theme after components are rendered
+    window.themeManager = new window.ThemeManager();
 });
