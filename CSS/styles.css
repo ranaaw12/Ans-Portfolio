@@ -415,6 +415,13 @@ html {
 [data-theme="dark"] .text-zinc-800,
 [data-theme="dark"] .text-zinc-900 { color: var(--text-secondary); }
 
+/* High contrast text colors for dark mode */
+[data-theme="dark"] .text-blue-900,
+[data-theme="dark"] .text-blue-950 { color: #e0e7ff; }
+
+[data-theme="dark"] .bg-gradient-to-r.from-slate-900,
+[data-theme="dark"] .bg-gradient-to-r.from-blue-900 { background-image: linear-gradient(to right, #cbd5e1, #1e3a8a); }
+
 [data-theme="dark"] .bg-white,
 [data-theme="dark"] .bg-gray-50,
 [data-theme="dark"] .bg-slate-50,
